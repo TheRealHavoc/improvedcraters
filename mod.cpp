@@ -1,0 +1,12 @@
+name = "Improved Craters";
+picture = "picture.paa";
+logo = "logo.paa";
+logoOver = "logo.paa";
+actionName = "Website";
+action = "https://steamcommunity.com/sharedfiles/filedetails/?id=2853200431";
+description = "An improved version of the Simple craters mod, making use of the new terrain deformation introduced in 2.10.";
+tooltip = "Improved Craters";
+tooltipOwned = "Improved Craters";
+overview = "An improved version of the Simple craters mod, making use of the new terrain deformation introduced in 2.10.";
+overviewPicture = "picture.paa";
+author = "Havoc";
