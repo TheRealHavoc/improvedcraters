@@ -28,3 +28,5 @@ if (!IC_setting_allowGroundTextures) exitWith {
 	private _decal = _x createVehicle _pos;
 	_decal setDir (random 360);
 } foreach ["Land_DirtPatch_03_F", "Land_ClutterCutter_large_F"];
+
+_positions
