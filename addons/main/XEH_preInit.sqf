@@ -13,7 +13,7 @@ ADDON = true;
 	["Crater size scale", "Set the scale of the crater size. Higher the scale, bigger the craters."],
 	["Improved Craters"],
 	[1, 4, 1, 1, false],
-	2
+	1
 ] call CBA_fnc_addSetting;
 
 [
@@ -22,7 +22,7 @@ ADDON = true;
 	["Allow small explosions", "Allow small explosions to create craters. This can have a large impact on performance!"],
 	["Improved Craters"],
 	false,
-	2
+	1
 ] call CBA_fnc_addSetting;
 
 [
@@ -31,7 +31,7 @@ ADDON = true;
 	["Allow ground textures", "Allow ground textures to spawn."],
 	["Improved Craters"],
 	true,
-	2
+	1
 ] call CBA_fnc_addSetting;
 
 [

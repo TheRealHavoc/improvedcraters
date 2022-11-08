@@ -1,5 +1,4 @@
-PREP(initServer);
-PREP(initClient);
+PREP(handleProjectileCreatedEH);
 PREP(log);
 PREP(spawnCrater);
 PREP(getPoints);

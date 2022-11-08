@@ -2,5 +2,4 @@
 
 "Initializing mod." call FUNC(log);
 
-[] call FUNC(initServer);
-[] call FUNC(initClient);
+[] call FUNC(handleProjectileCreatedEH);

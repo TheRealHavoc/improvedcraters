@@ -1,11 +1,9 @@
 #include "script_component.hpp"
 
-if (isServer) exitWith {
-	"The current client is the server. Exiting initClient script." call FUNC(log);
-};
-
 addMissionEventHandler ["ProjectileCreated", {
 	params ["_projectile"];
+
+	if ((owner _projectile isEqualTo 0) && !hasInterface) exitWith {};
 
 	_projectile addEventHandler ["Explode", {
 		params ["_projectile", "_pos", "_velocity"];
