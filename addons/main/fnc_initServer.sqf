@@ -7,6 +7,8 @@ if (!isServer) exitWith {
 addMissionEventHandler ["ProjectileCreated", {
 	params ["_projectile"];
 
+	if (owner _projectile isEqualTo 0) exitWith {};
+
 	_projectile addEventHandler ["Explode", {
 		params ["_projectile", "_pos", "_velocity"];
 
