@@ -16,7 +16,7 @@ format ["Creating crater with a height change of %1 with a diameter of %2", _hei
 
 private _positions = [_pos, _diameter, _heightChange] call FUNC(getPoints);
 
-[[_positions]] remoteExec ["setTerrainHeight", 2];
+[[_positions, improvedcraters_setting_allowAdjustObjects]] remoteExec ["setTerrainHeight", 2];
 
 if (!improvedcraters_setting_allowGroundTextures) exitWith {
 	"Ground textures are disabled." call FUNC(log);

@@ -44,6 +44,15 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
+	"improvedcraters_setting_allowAdjustObjects",
+	"Checkbox",
+	["Adjust objects", "Allow objects on modified points to be moved up/down to keep the same ATL height, this includes flying objects."],
+	["Improved Craters", "Miscellaneous"],
+	true,
+	1
+] call CBA_fnc_addSetting;
+
+[
 	"improvedcraters_setting_debugMode",
 	"Checkbox",
 	["Debug mode", "Logs events and stuff to the RPT."],
