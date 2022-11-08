@@ -8,6 +8,8 @@ addMissionEventHandler ["ProjectileCreated", {
 	_projectile addEventHandler ["Explode", {
 		params ["_projectile", "_pos", "_velocity"];
 
+		if (call FUNC(inSafeZone)) exitWith {};
+
 		private _size = getNumber (configFile >> "CfgAmmo" >> (typeOf _projectile) >> "indirectHitRange") * getNumber (configFile >> "CfgAmmo" >> (typeOf _projectile) >> "hit");
 
 		// Prevent things like smoke grenades from generating craters

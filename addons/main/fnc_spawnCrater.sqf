@@ -2,14 +2,6 @@
 
 params ["_pos", "_size"];
 
-private _inSafeZone = false;
-
-{
-	if (_pos inArea _x) exitWith { _inSafeZone = true; };
-} forEach IC_SafeZones;
-
-if (_inSafeZone) exitWith {};
-
 [30000, -2, 24, 6] params ["_baseSize", "_baseHeightChange", "_baseDiameter", "_baseDecalSize"];
 
 private _heightChange = (linearConversion [1, _baseSize, _size, 0, _baseHeightChange, true]) * IC_setting_craterDepthScale;

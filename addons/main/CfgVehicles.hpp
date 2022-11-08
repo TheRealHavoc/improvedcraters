@@ -20,15 +20,15 @@ class CfgVehicles
 	class IC_ModuleSafeZone: ModuleCoverMap_F
 	{
 		scope = 2;
-		displayName = "Safezone";
+		displayName = "Safe Zone";
 		category = "IC";
 		function = FUNC(initSafeZoneModule);
 		functionPriority = 1;
-		isGlobal = 0;
+		isGlobal = 2;
 
 		class Attributes: AttributesBase
 		{
-			class ModuleDescription: ModuleDescription {};
+			class ModuleDescription {};
 		};
 
 		class AttributeValues
@@ -37,7 +37,7 @@ class CfgVehicles
 			size3[] = {100, 100, -1};
 		};
 
-		class ModuleDescription: ModuleDescription
+		class ModuleDescription
 		{
             description = "Set a safezone to prevent projectiles from leaving craters.";
         };
