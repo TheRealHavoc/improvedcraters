@@ -6,10 +6,12 @@ class CfgPatches {
         author = "Havoc";
         url = "";
         requiredVersion = 2.10;
-        requiredAddons[] = {"cba_main"};
-        units[] = {};
+        requiredAddons[] = {"cba_main", "A3_Modules_F"};
+        units[] = {"IC_ModuleSafeZone"};
         weapons[] = {};
     };
 };
 
+#include "CfgFactionClasses.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgEventhandlers.hpp"

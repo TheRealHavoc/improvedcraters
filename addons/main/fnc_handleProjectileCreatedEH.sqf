@@ -16,12 +16,12 @@ addMissionEventHandler ["ProjectileCreated", {
 		};
 
 		// If explosion is too small, nothing happens.
-		if (_size <= 2400 && !improvedcraters_setting_allowSmallExplosions) exitWith {
+		if (_size <= 2400 && !IC_setting_allowSmallExplosions) exitWith {
 			format ["Projectile %1 has exploded and was considered a small explosion with a size of %2", _projectile, _size] call FUNC(log);
 		};
 
 		format ["Projectile %1 has exploded with a size of %2", _projectile, _size] call FUNC(log);
 
-		[_pos, _size] call FUNC(spawnCrater);
+		[_pos, _size] remoteExec [QFUNC(spawnCrater), 2];
 	}];
 }];

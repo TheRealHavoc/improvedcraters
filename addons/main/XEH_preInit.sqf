@@ -8,7 +8,7 @@ ADDON = false;
 ADDON = true;
 
 [
-	"improvedcraters_setting_craterDepthScale",
+	"IC_setting_craterDepthScale",
 	"SLIDER",
 	["Crater depth scale", "Set the scale of the crater depth. Higher the scale, deeper the craters."],
 	["Improved Craters", "Scale"],
@@ -17,7 +17,7 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
-	"improvedcraters_setting_craterDiameterScale",
+	"IC_setting_craterDiameterScale",
 	"SLIDER",
 	["Crater diameter scale", "Set the scale of the crater diameter. Higher the scale, wide the craters."],
 	["Improved Craters", "Scale"],
@@ -26,7 +26,7 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
-	"improvedcraters_setting_allowSmallExplosions",
+	"IC_setting_allowSmallExplosions",
 	"Checkbox",
 	["Allow small explosions", "Allow small explosions to create craters. This can have a large impact on performance!"],
 	["Improved Craters", "Performance"],
@@ -35,7 +35,7 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
-	"improvedcraters_setting_allowGroundTextures",
+	"IC_setting_allowGroundTextures",
 	"Checkbox",
 	["Allow ground textures", "Allow ground textures to spawn."],
 	["Improved Craters", "Miscellaneous"],
@@ -44,7 +44,7 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
-	"improvedcraters_setting_allowAdjustObjects",
+	"IC_setting_allowAdjustObjects",
 	"Checkbox",
 	["Adjust objects", "Allow objects on modified points to be moved up/down to keep the same ATL height, this includes flying objects."],
 	["Improved Craters", "Miscellaneous"],
@@ -53,7 +53,7 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
-	"improvedcraters_setting_debugMode",
+	"IC_setting_debugMode",
 	"Checkbox",
 	["Debug mode", "Logs events and stuff to the RPT."],
 	["Improved Craters", "Debug"],

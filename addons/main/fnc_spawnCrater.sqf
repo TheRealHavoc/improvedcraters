@@ -2,11 +2,19 @@
 
 params ["_pos", "_size"];
 
+private _inSafeZone = false;
+
+{
+	if (_pos inArea _x) exitWith { _inSafeZone = true; };
+} forEach IC_SafeZones;
+
+if (_inSafeZone) exitWith {};
+
 [30000, -2, 24, 6] params ["_baseSize", "_baseHeightChange", "_baseDiameter", "_baseDecalSize"];
 
-private _heightChange = (linearConversion [1, _baseSize, _size, 0, _baseHeightChange, true]) * improvedcraters_setting_craterDepthScale;
-private _diameter = (linearConversion [1, _baseSize, _size, 0, _baseDiameter, true]) * (improvedcraters_setting_craterDiameterScale / 2);
-private _scale = (linearConversion [1, _baseSize, _size, 1, _baseDecalSize, true]) * (improvedcraters_setting_craterDiameterScale / 4);
+private _heightChange = (linearConversion [1, _baseSize, _size, 0, _baseHeightChange, true]) * IC_setting_craterDepthScale;
+private _diameter = (linearConversion [1, _baseSize, _size, 0, _baseDiameter, true]) * (IC_setting_craterDiameterScale / 2);
+private _scale = (linearConversion [1, _baseSize, _size, 1, _baseDecalSize, true]) * (IC_setting_craterDiameterScale / 4);
 
 if (((_pos # 2) + _heightChange) > getTerrainHeight _pos) exitWith {
 	format ["Explosion was too high to make an impact on the ground with a height of %1.", (_pos # 2)] call FUNC(log);
@@ -16,9 +24,9 @@ format ["Creating crater with a height change of %1 with a diameter of %2", _hei
 
 private _positions = [_pos, _diameter, _heightChange] call FUNC(getPoints);
 
-[[_positions, improvedcraters_setting_allowAdjustObjects]] remoteExec ["setTerrainHeight", 2];
+setTerrainHeight [_positions, IC_setting_allowAdjustObjects];
 
-if (!improvedcraters_setting_allowGroundTextures) exitWith {
+if (!IC_setting_allowGroundTextures) exitWith {
 	"Ground textures are disabled." call FUNC(log);
 };
 

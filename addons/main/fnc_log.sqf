@@ -2,6 +2,6 @@
 
 params ["_content"];
 
-if (!improvedraters_setting_debugMode) exitWith {};
+if (!IC_setting_debugMode) exitWith {};
 
 diag_log text ("[Improved Craters] " + _content);
