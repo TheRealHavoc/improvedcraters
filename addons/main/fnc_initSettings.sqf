@@ -47,7 +47,7 @@
 	"Checkbox",
 	["Limit amount of ground textures", "Limit the total amount of ground textures on the map."],
 	["Improved Craters", "Performance"],
-	true,
+	false,
 	1
 ] call CBA_fnc_addSetting;
 
@@ -56,7 +56,7 @@
 	"SLIDER",
 	["Max ground textures", "Set the max amount of ground textures. When limit is reached, older ground textures will be removed."],
 	["Improved Craters", "Performance"],
-	[10, 300, 50, 0, false],
+	[10, 300, 100, 0, false],
 	1
 ] call CBA_fnc_addSetting;
 
@@ -83,7 +83,7 @@
 	"Checkbox",
 	["Limit amount of debris", "Limit the total amount of debris on the map."],
 	["Improved Craters", "Performance"],
-	true,
+	false,
 	1
 ] call CBA_fnc_addSetting;
 
@@ -92,7 +92,7 @@
 	"SLIDER",
 	["Max debris", "Set the max amount of debris. When limit is reached, older debris will be removed."],
 	["Improved Craters", "Performance"],
-	[10, 300, 50, 0, false],
+	[10, 300, 100, 0, false],
 	1
 ] call CBA_fnc_addSetting;
 
