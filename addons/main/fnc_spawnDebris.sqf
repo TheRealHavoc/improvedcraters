@@ -4,7 +4,7 @@ params ["_center", "_diameter"];
 
 _center set [2, 0];
 
-if !(IC_setting_allowDebris) exitWith {};
+if !(IC_setting_allowDebris) exitWith { [] };
 
 private _radius = _diameter / 2;
 
@@ -27,26 +27,32 @@ while { _pointerPosition isNotEqualTo [0,0] } do {
 	}] call BIS_fnc_randomPos;
 };
 
-if ((count _positions) isEqualTo 0) exitWith {};
+if ((count _positions) isEqualTo 0) exitWith { [] };
 
 if (isNil "IC_AllDebrisArray") then {
 	IC_AllDebrisArray = [];
 };
+
+private _newDebrisArray = [];
 
 {
 	private _debris = createVehicle [_debrisClass, _x, [], 0, "CAN_COLLIDE"];
 	_debris setDir (random 360);
 	_debris setVectorUp surfaceNormal position _debris;
 
-	IC_AllDebrisArray append [_debris];
+	_newDebrisArray append [_debris];
 } forEach _positions;
+
+IC_AllDebrisArray append _newDebrisArray;
 
 private _difference = (count IC_AllDebrisArray) - (floor IC_setting_maxDebris);
 
-if (_difference <= 0) exitWith {};
+if (_difference <= 0) exitWith { [] };
 
 {
 	deleteVehicle _x;
 } forEach (IC_AllDebrisArray select [0, _difference]);
 
 IC_AllDebrisArray deleteRange [0, _difference];
+
+_newDebrisArray

@@ -19,8 +19,11 @@ private _positions = [_pos, _diameter, _heightChange] call FUNC(getPoints);
 
 setTerrainHeight [_positions, IC_setting_allowAdjustObjects];
 
-[_pos, _diameter] call FUNC(spawnDebris);
+private _newDebrisArray = [_pos, _diameter] call FUNC(spawnDebris);
 
-[_pos, _diameter] call FUNC(spawnGroundTextures);
+private _newGroundTexturesArray = [_pos, _diameter] call FUNC(spawnGroundTextures);
 
-_positions
+/*
+	returns: [positions : ARRAY, debris : ARRAY, ground textures : ARRAY]
+*/
+[_positions, _newDebrisArray, _newGroundTexturesArray]
