@@ -6,3 +6,4 @@ PREP(initSafeZoneModule);
 PREP(inSafeZone);
 PREP(spawnDebris);
 PREP(spawnGroundTextures);
+PREP(initSettings);
