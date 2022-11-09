@@ -2,7 +2,7 @@
 
 params ["_pos", "_size"];
 
-[30000, -2, 24, 6] params ["_baseSize", "_baseHeightChange", "_baseDiameter", "_baseDecalSize"];
+[45000, -2, 36] params ["_baseSize", "_baseHeightChange", "_baseDiameter"];
 
 private _heightChange = (linearConversion [1, _baseSize, _size, 0, _baseHeightChange, true]) * IC_setting_craterDepthScale;
 private _diameter = (linearConversion [1, _baseSize, _size, 0, _baseDiameter, true]) * (IC_setting_craterDiameterScale / 2);
