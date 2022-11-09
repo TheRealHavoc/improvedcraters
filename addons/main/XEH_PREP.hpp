@@ -4,3 +4,5 @@ PREP(spawnCrater);
 PREP(getPoints);
 PREP(initSafeZoneModule);
 PREP(inSafeZone);
+PREP(spawnDebris);
+PREP(spawnGroundTextures);

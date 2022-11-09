@@ -44,6 +44,24 @@ ADDON = true;
 ] call CBA_fnc_addSetting;
 
 [
+	"IC_setting_allowDebris",
+	"Checkbox",
+	["Allow debris", "Allow debris to spawn."],
+	["Improved Craters", "Miscellaneous"],
+	true,
+	1
+] call CBA_fnc_addSetting;
+
+[
+	"IC_setting_maxDebrisCountPerCrater",
+	"SLIDER",
+	["Max debris count per crater", "Set the max amount of debris per crater. High numbers can impact performance on larger craters!"],
+	["Improved Craters", "Miscellaneous"],
+	[1, 100, 6, 0, false],
+	1
+] call CBA_fnc_addSetting;
+
+[
 	"IC_setting_allowAdjustObjects",
 	"Checkbox",
 	["Adjust objects", "Allow objects on modified points to be moved up/down to keep the same ATL height, this includes flying objects."],
